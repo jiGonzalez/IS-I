@@ -1,4 +1,5 @@
-Este repositorio es para los controles de version del proyecto final para la clase de _Ingenieria de Software I_ impartido por _Juan Pablo Soto_ en la _Universidad de Sonora_.
+Este repositorio es para los controles de version del proyecto final para la clase de *Ingenieria de Software I* impartido por *Dr. Juan Pablo Soto* en la *Universidad de Sonora*. 
+
 Integrantes:
-	* Jose Ignacio Gonzalez Machado
-	* Gustavo Adolfo Vazquez Durazo
+* __Jose Ignacio Gonzalez Machado__
+* __Gustavo Adolfo Vazquez Durazo__
