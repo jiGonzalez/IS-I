@@ -14,7 +14,7 @@
 
     <div class="container">
       <h2>Registro de Usuarios</h2>
-      <form form name="reg" action="ejecucion.php" onsubmit='return validarFormulario()' method="post">
+      <form form name="reg" action="ejecucion.php" onsubmit='return validarFormularioRegistro()' method="post">
         <?php
           if (!isset($_GET['entrada']))
           {
@@ -51,8 +51,8 @@
         </div>
 
         <div class="form-group">
-          <label for="confirmacion">Confirmar Contraseña</label>
-          <input type="password" class="form-control" id="confirmacion"  name="claveconf">
+          <label for="conf">Confirmar Contraseña</label>
+          <input type="password" class="form-control" id="conf"  name="conf">
         </div>
 
         <button type="submit" class="btn btn-primary" value="Input Button" onclick="">Registrar</button>

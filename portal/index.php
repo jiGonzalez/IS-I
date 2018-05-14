@@ -1,3 +1,20 @@
+<?php
+  ob_start();
+  session_start();
+  include 'conexion.php';
+
+  if( !isset($_SESSION['usuario']) ) {
+   header("Location: login.php");
+   exit;
+  }
+
+  $sql = "SELECT nombre, apellido, matricula FROM usuarios WHERE id =" . $_SESSION['usuario'];
+  $res = $conx->query($sql);
+  $usuario = mysqli_fetch_array($res);
+
+?>
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <title>Portal de Asesorias</title>
@@ -12,6 +29,7 @@
   <div class="container">
     <h2>Portal de Asesorias</h2>
     <p>Alumnos</p>
+    <?php echo($usuario['nombre'] . " " . $usuario['apellido']); ?>
     <ul class="nav nav-tabs">
       <li class="nav-item">
         <a class="nav-link active"  data-toggle="tab" href="#">Pagina Principal</a>
