@@ -35,14 +35,14 @@
     }
 
     if(!$error) {
-     $sql = "SELECT nombre, apellido, clave, id FROM usuarios WHERE correo = '$correo'";
+     $sql = "SELECT nombre, apellido, clave, usuario_id FROM usuarios WHERE correo = '$correo'";
      $res = $conx->query($sql);
      $arr = mysqli_fetch_array($res);
      $filas = mysqli_num_rows($res);
 
 
      if($filas == 1 && $arr['clave'] == $clave) {
-       $_SESSION['usuario'] = $arr['id'] ;
+       $_SESSION['usuario'] = $arr['usuario_id'] ;
        header("Location: index.php");
       } else {
         $errorSesion = "Credenciales incorrectos, intente de nuevo. ";
@@ -54,7 +54,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Portal de academico de alumnos</title>
+  <title>Portal de Asesorias - Ingreso</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
@@ -67,7 +67,7 @@
 <body>
   <div class="container">
     <h2>Portal de Asesorias</h2>
-    <form method="post" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" autocomplete="off">
+    <form method="post" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" autocomplete="on">
       <p><h4>Ingrese a su cuenta</h4></p>
       <br/>
       <?php
@@ -113,6 +113,12 @@
 
     </form>
   </div>
+
+  <footer>
+    <div class='container'>
+    </div>
+  </footer>
+
 </body>
 </html>
 

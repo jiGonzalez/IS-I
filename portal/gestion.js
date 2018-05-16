@@ -3,7 +3,7 @@ function redireccionIndice() {
 }
 
 function redireccionRegistro() {
-  location.href = "usuario.php";
+  location.href = "registro.php";
 }
 
 function validarFormularioRegistro() {

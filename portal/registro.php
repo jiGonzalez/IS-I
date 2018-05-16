@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Portal de Asesorias - Ingreso/Registro</title>
+    <title>Portal de Asesorias - Registro</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -13,18 +13,10 @@
   <body>
 
     <div class="container">
-      <h2>Registro de Usuarios</h2>
+      <h2>Portal de Asesorias</h2>
       <form form name="reg" action="ejecucion.php" onsubmit='return validarFormularioRegistro()' method="post">
-        <?php
-          if (!isset($_GET['entrada']))
-          {
-            echo '';
-          }
-          if (isset($_GET['entrada']) && $_GET['entrada']=='exito')
-          {
-            echo('<script>redireccionIndice()</script>');
-          }
-        ?>
+        <p><h4>Registro de Usuarios</h4></p>
+        
         <div class="form-group">
           <label for="correo">Correo electronico</label>
           <input type="email" class="form-control" id="correo"  name="correo">

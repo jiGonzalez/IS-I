@@ -1,4 +1,5 @@
 <?php
+ob_start();
 session_start();
 
 include 'conexion.php';
@@ -13,10 +14,15 @@ include 'conexion.php';
   $sql = "INSERT INTO usuarios (nombre, apellido, correo, clave, matricula, rol) VALUES ({$nombre}, {$apellido}, {$correo}, {$clave}, {$matricula}, {$rol})";
 
   if ($conx->query($sql) === TRUE) {
-    echo "Se agrego exitosamente. " . "<br>";
-    header("location: usuario.php?entrada=exito");
+    $sql = "SELECT usuario_id FROM usuarios WHERE correo = {$correo}";
+    $res = $conx->query($sql);
+    $arr = mysqli_fetch_array($res);
+    $_SESSION['usuario'] = $arr['usuario_id'];
+    header("Location: index.php");
   }else {
     echo "Error: " . $sql . "<br>" . $conx->error . "<br>";
   }
+
 $conx -> close();
+ob_end_flush();
 ?>
