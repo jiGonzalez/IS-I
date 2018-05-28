@@ -65,7 +65,7 @@
 </head>
 
 <body>
-  <div class="container">
+  <div class="container w-50">
     <h2>Portal de Asesorias</h2>
     <form method="post" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" autocomplete="on">
       <p><h4>Ingrese a su cuenta</h4></p>
@@ -85,25 +85,15 @@
       ?>
 
       <div class="form-group">
-        <div class="input-group">
-          <label for="correo">Correo electronico:</label>
-          <input type="email" id="correo" class="form-control" name="correo" placeholder="correo@dominio.com" maxlength="40" />
-        </div>
+        <label for="correo">Correo electronico:<br/></label>
+        <input type="email" id="correo" class="form-control" name="correo" placeholder="correo@dominio.com" maxlength="40" />
         <span class="text-danger"><?php echo $errorCorreo; ?></span>
       </div>
 
       <div class="form-group">
-        <div class ="input-group">
-          <label for="clave">Contraseña:&emsp;&ensp;&emsp;&ensp;</label>
-          <input type="password" id="clave" name="clave" class="form-control" placeholder="Contraseña" maxlength="20" />
-          <span class="text-danger"><?php echo $errorClave; ?></span>
-        </div>
-      </div>
-
-      <div class="form-group form-check">
-        <label class="form-check-label">
-          <input class="form-check-input" type="checkbox" name="rec"> Recordarme
-        </label>
+        <label for="clave">Contraseña:</label>
+        <input type="password" id="clave" name="clave" class="form-control" placeholder="Contraseña" maxlength="20" />
+        <span class="text-danger"><?php echo $errorClave; ?></span>
       </div>
 
       <div class="form-group">

@@ -44,3 +44,7 @@ function validarFormularioRegistro() {
   }
   return true;
 }
+
+function validarFormularioPeticion() {
+  return true;
+}

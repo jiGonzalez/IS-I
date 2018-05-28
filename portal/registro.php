@@ -12,11 +12,11 @@
   </head>
   <body>
 
-    <div class="container">
+    <div class="container w-50">
       <h2>Portal de Asesorias</h2>
       <form form name="reg" action="ejecucion.php" onsubmit='return validarFormularioRegistro()' method="post">
         <p><h4>Registro de Usuarios</h4></p>
-        
+
         <div class="form-group">
           <label for="correo">Correo electronico</label>
           <input type="email" class="form-control" id="correo"  name="correo">
